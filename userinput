@@ -1,0 +1,13 @@
+l = prompt('Please pick a low number');
+h = prompt('Please pick a higher number');
+
+
+const random = (l,h) => {
+	if ( isNaN(l) || isNaN(h) ) {
+		throw Error('Both arguments must be numbers!');
+	}
+	return Math.floor((Math.random() * (h - l + 1)) + l);
+}
+
+// Call the function and pass it different values
+alert(random(l, h));
